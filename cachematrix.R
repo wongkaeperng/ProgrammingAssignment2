@@ -39,7 +39,7 @@ cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         
         # get the inverse of x        
-        inv <- x$getinverse()
+        inv <- x$getinv()
   
         # check if the matrix is cache. If so, just return the cache value.   
         if(!is.null(inv)) {
@@ -51,8 +51,8 @@ cacheSolve <- function(x, ...) {
         inv <- solve(matrixData, ...)
         
         # set the inverse of the matrix 
-        x$setinverse(inv)
+        x$setinv(inv)
         
         # return the inv
-        inv
+        return(inv)
 }
